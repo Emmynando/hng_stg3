@@ -31,6 +31,23 @@ export default function ShoeList() {
     }
   }, [searchimg, images]);
 
+  // configurations for next blur data url
+  const keyStr =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
+
+  const triplet = (e1: number, e2: number, e3: number) =>
+    keyStr.charAt(e1 >> 2) +
+    keyStr.charAt(((e1 & 3) << 4) | (e2 >> 4)) +
+    keyStr.charAt(((e2 & 15) << 2) | (e3 >> 6)) +
+    keyStr.charAt(e3 & 63);
+
+  const rgbDataURL = (r: number, g: number, b: number) =>
+    `data:image/gif;base64,R0lGODlhAQABAPAA${
+      triplet(0, r, g) + triplet(b, 255, 255)
+    }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
+
+  // configurations for beautiful drag and drop
+
   const onDragEnd = (result: DropResult) => {
     if (!result.destination) return;
 
@@ -75,6 +92,9 @@ export default function ShoeList() {
                         width={200}
                         height={200}
                         alt="chukwuemeka"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        placeholder="blur"
+                        blurDataURL={rgbDataURL(237, 181, 6)}
                       />
                       <p>{item?.name}</p>
                     </div>
