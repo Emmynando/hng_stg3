@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital@1&family=Libre+Baskerville&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  /* color: #fff; */
+  height: 100%;
+  margin: auto;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+label,
+input {
+  display: block;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 2rem;
+}
+
+nav h1 {
+  font-family: "Libre Baskerville", serif;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 10px;
+}
+
+li {
+  font-size: 22px;
+  font-weight: bold;
+  font-family: "Cormorant Garamond", serif;
+  list-style-type: none;
+}
+
+li button {
+  background-color: #c58640;
+  border-color: transparent;
+  border-radius: 5px;
+  padding: 0.2rem;
+}
+
+li button:hover {
+  background-color: #df9c51;
+}
+
+.active {
+  border-bottom: 2px solid #df9c51;
+}
+
+input::-webkit-input-placeholder {
+  color: rgb(39, 28, 28);
+  font-size: 1rem;
+}
+
+:root {
+  --pri-clr: rgb(252, 223, 177);
+  --sec-color: rgb(247, 139, 100);
+  --btn-clr: #c58640;
+  --pri-text: "Libre Baskerville", serif;
+  --sec-text: "Cormorant Garamond", serif;
+}

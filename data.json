@@ -1,0 +1,34 @@
+{
+  "sneakers": [
+    {
+      "id": 1,
+      "image": "/sneakers/shoe-1.webp",
+      "name": "White Nike"
+    },
+    {
+      "id": 2,
+      "image": "/sneakers/shoe-2.webp",
+      "name": "White NB"
+    },
+    {
+      "id": 3,
+      "image": "/sneakers/shoe-3.webp",
+      "name": "Aba Made"
+    },
+    {
+      "id": 4,
+      "image": "/sneakers/shoe-4.webp",
+      "name": "Pink Air"
+    },
+    {
+      "id": 5,
+      "image": "/sneakers/shoe-5.webp",
+      "name": "Blue Nike"
+    },
+    {
+      "id": 6,
+      "image": "/sneakers/shoe-6.webp",
+      "name": "Old Nike"
+    }
+  ]
+}
