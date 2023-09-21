@@ -1,7 +1,9 @@
 "use client";
+import { useEffect } from "react";
 
 import ShoeList from "@components/components/Layout/ShoeList";
 import { signIn, useSession } from "next-auth/react";
+import Loader from "@components/components/UI/Loader";
 
 export default function Album() {
   const { status } = useSession({
@@ -13,14 +15,17 @@ export default function Album() {
   });
 
   if (status === "loading") {
-    return "loading";
+    return <Loader />;
   }
-  return (
-    <>
+
+  if (status === "authenticated") {
+    return (
       <>
-        <h1 style={{ textAlign: "center" }}>This is album page</h1>
-        <ShoeList />
+        <>
+          <h1 style={{ textAlign: "center" }}>This is album page</h1>
+          <ShoeList />
+        </>
       </>
-    </>
-  );
+    );
+  }
 }
