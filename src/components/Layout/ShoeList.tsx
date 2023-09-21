@@ -96,7 +96,7 @@ export default function ShoeList() {
                         placeholder="blur"
                         blurDataURL={rgbDataURL(237, 181, 6)}
                       />
-                      <p>{item?.name}</p>
+                      <p className={styles["shoe-name"]}>{item?.name}</p>
                     </div>
                   )}
                 </Draggable>
