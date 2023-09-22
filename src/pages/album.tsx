@@ -1,5 +1,4 @@
 "use client";
-import { useEffect } from "react";
 
 import ShoeList from "@components/components/Layout/ShoeList";
 import { signIn, useSession } from "next-auth/react";
