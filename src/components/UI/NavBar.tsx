@@ -19,7 +19,7 @@ export default function NavBar() {
             {session ? (
               <button onClick={() => signOut()}>Sign Out</button>
             ) : (
-              <Link href="/sign-in">
+              <Link href="/album">
                 <button>Sign in</button>
               </Link>
             )}
