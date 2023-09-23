@@ -17,7 +17,7 @@ export default function NavBar() {
           </li>
           <li>
             {session ? (
-              <button onClick={() => signOut}>Sign Out</button>
+              <button onClick={() => signOut()}>Sign Out</button>
             ) : (
               <Link href="/sign-in">
                 <button>Sign in</button>
